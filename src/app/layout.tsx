@@ -9,19 +9,12 @@ export const metadata: Metadata = {
     description: "Mint the Eternal Gateway NFT on Farcaster!",
     images: [
       {
-        url: "https://nft-mint-mini-app.vercel.app/images/frame_image.png", // تصویر فریم
+        url: "https://nft-mint-mini-app.vercel.app/images/frame_image.png",
         width: 1200,
         height: 800,
         alt: "Eternal Gateway NFT",
       },
     ],
-  },
-  other: {
-    "fc:frame": "vNext",
-    "fc:frame:image": "https://nft-mint-mini-app.vercel.app/images/frame_image.png", // تصویر فریم
-    "fc:frame:button:1": "Mint Eternal Gateway", // عنوان دکمه
-    "fc:frame:button:1:action": "link", // اکشن مستقیم برای هدایت
-    "fc:frame:button:1:target": "https://nft-mint-mini-app.vercel.app", // URL مینی اپ
   },
 };
 
@@ -30,8 +23,26 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const frameEmbed = JSON.stringify({
+    version: "next",
+    imageUrl: "https://nft-mint-mini-app.vercel.app/images/frame_image.png",
+    button: {
+      title: "Mint Now",
+      action: {
+        type: "launch_frame",
+        url: "https://nft-mint-mini-app.vercel.app",
+        name: "Eternal Gateway",
+        splashImageUrl: "https://nft-mint-mini-app.vercel.app/images/nft_image.png",
+        splashBackgroundColor: "#1a1a2e",
+      },
+    },
+  });
+
   return (
     <html lang="en">
+      <head>
+        <meta name="fc:frame" content={frameEmbed} />
+      </head>
       <body>{children}</body>
     </html>
   );
