@@ -5,15 +5,15 @@ import { sdk } from "@farcaster/frame-sdk";
 
 export default function Home() {
   useEffect(() => {
-    // این خط به Warpcast می‌گه که مینی اپ آماده‌ی نمایشه
     sdk.actions.ready();
   }, []);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#1a1a2e] text-white p-4">
       <h1 className="text-4xl font-bold mb-4">Eternal Gateway NFT</h1>
+      {/* موقتاً تصویر رو با لینک وب جایگزین کن */}
       <img
-        src="/images/nft_image.png"
+        src="https://nft-mint-mini-app.vercel.app/images/nft_image.png"
         alt="Eternal Gateway NFT"
         className="w-64 h-64 object-cover rounded-lg mb-4"
       />
