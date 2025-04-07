@@ -28,7 +28,7 @@ export default function RootLayout({
       <head>
         <meta
           name="fc:frame"
-          content='{"version":"next","imageUrl":"https://i.postimg.cc/ABCDEFG/image-name.png","button":{"title":"Mint Now","action":{"type":"launch_frame","url":"https://nft-mint-mini-app.vercel.app","name":"Eternal Gateway","splashImageUrl":"https://nft-mint-mini-app.vercel.app/images/nft_image.png","splashBackgroundColor":"#1a1a2e"}}}'
+          content='{"version":"next","imageUrl":"https://i.postimg.cc/filename.png","button":{"title":"Mint Now","action":{"type":"launch_frame","url":"https://nft-mint-mini-app.vercel.app","name":"Eternal Gateway","splashImageUrl":"https://nft-mint-mini-app.vercel.app/images/nft_image.png","splashBackgroundColor":"#1a1a2e"}}}'
         />
       </head>
       <body>{children}</body>
