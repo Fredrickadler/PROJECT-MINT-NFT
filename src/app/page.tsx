@@ -11,11 +11,14 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#1a1a2e] text-white p-4">
       <h1 className="text-4xl font-bold mb-4">Eternal Gateway NFT</h1>
-      {/* موقتاً تصویر رو با لینک وب جایگزین کن */}
+      {/* اضافه کردن پیام دیباگ برای تست */}
+      <p className="text-lg mb-4">Debug: Page is loading!</p>
+      {/* استفاده از لینک کامل برای تصویر */}
       <img
         src="https://nft-mint-mini-app.vercel.app/images/nft_image.png"
         alt="Eternal Gateway NFT"
         className="w-64 h-64 object-cover rounded-lg mb-4"
+        onError={() => console.log("Image failed to load")}
       />
       <p className="text-center mb-4">
         In ancient sunsets, this stone gateway led to 44 lost realms—Each realm
