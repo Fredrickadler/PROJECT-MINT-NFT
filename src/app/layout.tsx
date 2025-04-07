@@ -23,25 +23,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const frameEmbed = JSON.stringify({
-    version: "next",
-    imageUrl: "https://nft-mint-mini-app.vercel.app/images/frame_image.png",
-    button: {
-      title: "Mint Now",
-      action: {
-        type: "launch_frame",
-        url: "https://nft-mint-mini-app.vercel.app",
-        name: "Eternal Gateway",
-        splashImageUrl: "https://nft-mint-mini-app.vercel.app/images/nft_image.png",
-        splashBackgroundColor: "#1a1a2e",
-      },
-    },
-  });
-
   return (
     <html lang="en">
       <head>
-        <meta name="fc:frame" content={frameEmbed} />
+        <meta
+          name="fc:frame"
+          content='{"version":"next","imageUrl":"https://nft-mint-mini-app.vercel.app/images/frame_image.png","button":{"title":"Mint Now","action":{"type":"launch_frame","url":"https://nft-mint-mini-app.vercel.app","name":"Eternal Gateway","splashImageUrl":"https://nft-mint-mini-app.vercel.app/images/nft_image.png","splashBackgroundColor":"#1a1a2e"}}}'
+        />
       </head>
       <body>{children}</body>
     </html>
